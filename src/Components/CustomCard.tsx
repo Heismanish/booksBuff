@@ -12,7 +12,6 @@ const CardCustom: React.FC<custBook> = ({ books }) => {
   const descriptionRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
-    // Check if description overflows
     const checkOverflow = () => {
       if (descriptionRef.current) {
         setIsOverflowing(
@@ -23,7 +22,7 @@ const CardCustom: React.FC<custBook> = ({ books }) => {
     };
 
     checkOverflow();
-    window.addEventListener("resize", checkOverflow); // Re-check on resize
+    window.addEventListener("resize", checkOverflow);
     return () => window.removeEventListener("resize", checkOverflow);
   }, []);
 

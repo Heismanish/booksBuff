@@ -77,7 +77,6 @@ const AddBook = () => {
 
   return (
     <div className="mx-auto w-full max-w-[1360px] md:p-4 p-2 ">
-      {JSON.stringify(book)}
       <h1 className="text-3xl font-bold text-primary ">
         Add your book <hr className="shadow-xl" />
       </h1>
